@@ -1,0 +1,18 @@
+<div>
+  <span x-large>Your Content Here</span>
+  <!--<input type="text" [value]="title.value" (input)="title.value = $event.target.value" autofocus>-->
+  <!--
+    Rather than wiring up two-way data-binding ourselves
+    we can use Angular's [(ngModel)] syntax
+    <input type="text" [(ngModel)]="title.value">
+  -->
+
+  <pre>this.title = {{ title | json }}</pre>
+  <!--<div>{{nightShifts.name}}</div>-->
+  <ul>
+      <li *ngFor="#item of nightshifts.shifts" [style.background]="item.background">{{item.index}}</li>
+  </ul>
+  <div style="width: 100px; height: 50px" [style.background]="currentShift.background">{{currentShift.timeSlot}}</div>
+  
+  
+</div>
